@@ -1,6 +1,15 @@
+
+## Preview
+
+![Screen Shot 2021-11-01 at 2 07 37 PM](https://user-images.githubusercontent.com/27175437/139727219-06625d3e-9161-42a3-8d59-1f2f12482730.png)
+
+## Description
+This form ensures that all fields are filled prior to submission and does some simple regex validation on phone number, email address, and npi number.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
