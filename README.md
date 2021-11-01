@@ -1,3 +1,6 @@
+# Healthcare-Provider-Registration
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Preview
 
@@ -6,9 +9,7 @@
 ## Description
 This form ensures that all fields are filled prior to submission and does some simple regex validation on phone number, email address, and npi number.
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
 ## Available Scripts
