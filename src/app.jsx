@@ -17,11 +17,8 @@ const initialFormData = {
 };
 
 const initialFormErrors = {
-  firstName: false,
-  lastName: false,
   npiNum: false,
   teleNum: false,
-  bizAddress: false,
   email: false,
 };
 
