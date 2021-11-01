@@ -1,0 +1,55 @@
+.main-content {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: darkblue;
+}
+
+.form-modal {
+  background-color: white;
+  border-radius: 4px;
+
+  .header-row {
+    margin: 32px 32px 32px 32px;
+  }
+
+  .row {
+    margin: 16px 32px 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .last-row {
+    margin: 16px 32px 16px 32px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      height: 32px;
+    }
+  }
+
+  .input-label {
+    display: inline-block;
+    width: 100%;
+
+    + .input-label {
+      margin-left: 16px;
+    }
+
+    label {
+      display: inline-block;
+      text-align: left;
+    }
+    input {
+      display: block;
+      text-align: left;
+      height: 32px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
