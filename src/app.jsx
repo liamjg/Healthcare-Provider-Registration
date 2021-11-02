@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const filled = Object.values(formData).every((value) => value !== '');
-  const error = Object.values(formData).some((value) => value === true);
+  const error = Object.values(formErrors).some((value) => value === true);
 
   return (
     <div className="main-content">
