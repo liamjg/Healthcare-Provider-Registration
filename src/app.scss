@@ -22,7 +22,7 @@
     flex-grow: 1;
   }
 
-  .last-row {
+  .footer-row {
     margin: 16px 32px 16px 32px;
     display: flex;
     justify-content: flex-end;
@@ -44,6 +44,7 @@
       display: inline-block;
       text-align: left;
     }
+
     input {
       display: block;
       text-align: left;

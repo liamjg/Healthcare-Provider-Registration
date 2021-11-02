@@ -26,7 +26,6 @@ const App = () => {
   );
 
   const handleSubmit = (e) => {
-    // this function depends heavily on what we want to do with the data / form when finished
     e.preventDefault();
 
     console.log(formData);
@@ -91,7 +90,7 @@ const App = () => {
             <span className="input-label">
               <label htmlFor="bizAddress">Business address</label>
               <input
-                className={`form-control ${formErrors.bizAddress && 'error'}`}
+                className="form-control"
                 placeholder="Business address"
                 type="text"
                 name="bizAddress"
@@ -130,7 +129,7 @@ const App = () => {
               {formErrors.email && <small>Enter a valid email address</small>}
             </span>
           </div>
-          <div className="last-row">
+          <div className="footer-row">
             <button type="submit" disabled={!filled || error}>
               Join Availity
             </button>
