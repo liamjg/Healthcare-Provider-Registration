@@ -13,28 +13,13 @@ const EMAIL_REGEX =
 const NPI_REGEX = /^\d{10}$/;
 // source: me + wikipedia
 
-const initialFormData = {
-  firstName: '',
-  lastName: '',
-  npiNum: '',
-  teleNum: '',
-  bizAddress: '',
-  email: '',
-};
-
-const initialFormErrors = {
-  npiNum: false,
-  teleNum: false,
-  email: false,
-};
-
 const validateTelephoneNumber = (teleNum) => PHONE_REGEX.test(teleNum);
 
 const validateEmailAddr = (emailAddr) => EMAIL_REGEX.test(emailAddr);
 
 const validateNPINum = (npiNum) => NPI_REGEX.test(npiNum);
 
-const useForm = () => {
+const useForm = (initialFormData, initialFormErrors) => {
   const [formData, setFormData] = useState(initialFormData);
   const [formErrors, setFormErrors] = useState(initialFormErrors);
 

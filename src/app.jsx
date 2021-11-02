@@ -4,8 +4,26 @@ import useForm from './form-hook';
 
 import './app.scss';
 
+const initialFormData = {
+  firstName: '',
+  lastName: '',
+  npiNum: '',
+  teleNum: '',
+  bizAddress: '',
+  email: '',
+};
+
+const initialFormErrors = {
+  npiNum: false,
+  teleNum: false,
+  email: false,
+};
+
 const App = () => {
-  const [formData, formErrors, handleFormEvent, resetForm] = useForm();
+  const [formData, formErrors, handleFormEvent, resetForm] = useForm(
+    initialFormData,
+    initialFormErrors
+  );
 
   const handleSubmit = (e) => {
     // this function depends heavily on what we want to do with the data / form when finished
