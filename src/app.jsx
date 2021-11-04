@@ -2,6 +2,8 @@ import React from 'react';
 
 import useForm from './form-hook';
 
+import InputLabel from './input-label';
+
 import './app.scss';
 
 const initialFormData = {
@@ -49,85 +51,50 @@ const App = () => {
           noValidate
         >
           <div className="row">
-            <span className="input-label">
-              <label htmlFor="firstName">First name</label>
-              <input
-                className="form-control"
-                placeholder="First Name"
-                type="text"
-                name="firstName"
-                onBlur={handleFormEvent}
-                noValidate
-              />
-            </span>
-            <span className="input-label">
-              <label htmlFor="lastName">Last name</label>
-              <input
-                className="form-control"
-                placeholder="Last Name"
-                type="text"
-                name="lastName"
-                onBlur={handleFormEvent}
-                noValidate
-              />
-            </span>
+            <InputLabel
+              name="firstName"
+              labelText="First Name"
+              onBlur={handleFormEvent}
+            />
+            <InputLabel
+              name="lastName"
+              labelText="Last Name"
+              onBlur={handleFormEvent}
+            />
           </div>
           <div className="row">
-            <span className="input-label">
-              <label htmlFor="npiNum">NPI number</label>
-              <input
-                className={`form-control ${formErrors.npiNum && 'error'}`}
-                placeholder="NPI number"
-                type="text"
-                name="npiNum"
-                onBlur={handleFormEvent}
-                noValidate
-              />
-              {formErrors.npiNum && <small>Enter a valid NPI number</small>}
-            </span>
+            <InputLabel
+              name="npiNum"
+              labelText="NPI number"
+              error={formErrors.npiNum}
+              errorText={'Enter a valid NPI number'}
+              onBlur={handleFormEvent}
+            />
           </div>
           <div className="row">
-            <span className="input-label">
-              <label htmlFor="bizAddress">Business address</label>
-              <input
-                className="form-control"
-                placeholder="Business address"
-                type="text"
-                name="bizAddress"
-                onBlur={handleFormEvent}
-                noValidate
-              />
-            </span>
+            <InputLabel
+              name="bizAddress"
+              labelText="Business address"
+              onBlur={handleFormEvent}
+            />
           </div>
           <div className="row">
-            <span className="input-label">
-              <label htmlFor="teleNum">Telephone number</label>
-              <input
-                className={`form-control ${formErrors.teleNum && 'error'}`}
-                placeholder="Telephone number"
-                type="text"
-                name="teleNum"
-                onBlur={handleFormEvent}
-                noValidate
-              />
-              {formErrors.teleNum && (
-                <small>Enter a valid telephone number</small>
-              )}
-            </span>
+            <InputLabel
+              name="teleNum"
+              labelText="Telephone number"
+              error={formErrors.teleNum}
+              errorText={'Enter a valid telephone number'}
+              onBlur={handleFormEvent}
+            />
           </div>
           <div className="row">
-            <span className="input-label">
-              <label htmlFor="email">Email address</label>
-              <input
-                className={`form-control ${formErrors.email && 'error'}`}
-                placeholder="Email address"
-                type="text"
-                name="email"
-                onBlur={handleFormEvent}
-                noValidate
-              />
-              {formErrors.email && <small>Enter a valid email address</small>}
-            </span>
+            <InputLabel
+              name="email"
+              labelText="Email address"
+              error={formErrors.email}
+              errorText={'Enter a valid email address'}
+              onBlur={handleFormEvent}
+            />
           </div>
           <div className="footer-row">
             <button type="submit" disabled={!filled || error}>

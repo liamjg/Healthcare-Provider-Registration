@@ -1,0 +1,25 @@
+.input-label {
+  display: inline-block;
+  width: 100%;
+
+  label {
+    display: inline-block;
+    text-align: left;
+  }
+
+  input {
+    display: block;
+    text-align: left;
+    height: 32px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  small {
+    color: red;
+  }
+
+  input.error {
+    border: 1px solid red;
+  }
+}
